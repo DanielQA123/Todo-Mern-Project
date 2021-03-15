@@ -22,6 +22,19 @@ router.delete("delete/:id", (req,res,next) =>{
     res.send("done");
 });
 
+//Query Parameters: 
+router.patch("/update/:id", (req,res,next) => {
+    const id = req.params.id;
+    console.log(`id: ${id}`);
+    // const name = req.query.name;
+    // const age = req.query.age;
 
+    //destructuring??
+    const {name, age} = req.query;
+    console.log(` name: ${name}, age: ${age}`);
+    res.send(`Thanks for your information have a nice day, byeee!!`);
+
+
+})
 
 module.exports = router;
