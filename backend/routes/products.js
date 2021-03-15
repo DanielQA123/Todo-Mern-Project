@@ -1,8 +1,18 @@
 const router = require('express').Router();
+const {Product} = require("../config/db");
+
+let products = ["deodrant", "apples", "cheese","pineapple"];
 
 //Requests (CRUD)
 router.get("/getAll", (req,res, next)=>{
-    res.send("Here's the information you wanted");
+    Product.find((err, products) => {
+        if(err){
+            console.log(err)
+        }
+        res.send(products);
+    })
+
+    // res.send("Here's the information you wanted");
     // next();
 });
 
