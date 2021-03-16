@@ -14,7 +14,7 @@ const MainHome = () => {
                     nobis temporibus?
                 </p>
                 <p>
-                    <Button variant="info">Learn more</Button>
+                    <Button variant="info">Get Started</Button>
                 </p>
             </Jumbotron>
 
