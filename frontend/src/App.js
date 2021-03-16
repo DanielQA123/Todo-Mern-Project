@@ -1,11 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import '../src/CSS/App.css';
+import Home from './Components/Homepage/Home';
 
 const App = () =>  {
   
   return (
     <div className="App">
-      <p>Dan Says Hi</p>
+      <Home/>
     </div>
   );
 }
