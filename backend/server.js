@@ -19,8 +19,10 @@ app.use(logger);
 
 //Importing all of the routes into server.js file 
 const productRoute = require('./routes/products');
-
 app.use("/product", productRoute);
+
+const taskRoute = require('./routes/Task');
+app.use("/task", taskRoute);
 
 //communicate with the app on a specific port 
 // app.listen(5019);
