@@ -1,23 +1,27 @@
 'use strict';
 
-//Connecting to the database 
+//Connecting to the database
 const mongoose = require('mongoose'); 
 const {Schema, model} = mongoose;
+const {DB_URL, DB_NAME } = require('../config/CONSTS.json');
 
-const productSchema = new Schema({
-    name:String,
-    price: String,
-    onSale:Boolean
+const taskSchema = new Schema({
+    title:String,
+    startDate: Date,
+    notes: String,
+    priority: String,
+    dueDate: Date,
+    completed: Boolean
 });
 
-const Product = model('Product', productSchema);
+const Task = model('Task', taskSchema);
 
-mongoose.connect(`mongodb://localhost:27017/tesco`, { useNewUrlParser: true , useUnifiedTopology: true }, (err) =>{
-    if(err){
+mongoose.connect(`mongodb://${DB_URL}/${DB_NAME}`,{ useNewUrlParser: true, useUnifiedTopology: true }, (err) =>{
+    if (err){
         console.error(err);
-    }else{
+    }else {
         console.log(`Connected`);
     }
 });
 
-module.exports = {"Product":Product};
+module.exports = {"Task":Task};
