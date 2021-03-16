@@ -1,3 +1,5 @@
+import MainHome from "./MainHome"
+
 const Home = () => {
 
     return (
@@ -8,6 +10,7 @@ const Home = () => {
                 Excepturi rerum accusamus magnam eligendi quia veritatis animi provident cupiditate maxime.
                 Voluptatibus reiciendis dicta officiis, incidunt quae natus necessitatibus doloremque cupiditate delectus.</p>
             </div>
+            <MainHome/>
         </>
     )
 
