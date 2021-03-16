@@ -23,7 +23,8 @@ router.get("/getAll", (req,res, next)=>{
 
 router.post("/create", (req,res,next) =>{
     const name = req.body.name;
-    res.send(`Hello there ${name}`); 
+    products.push(name);
+    res.send(`Hello there ${name} added to the product list`); 
 }); 
 
 //url parameters or path variables: 

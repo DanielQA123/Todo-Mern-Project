@@ -1,5 +1,6 @@
 'use strict';
 
+//Connecting to the database 
 const mongoose = require('mongoose'); 
 const {Schema, model} = mongoose;
 

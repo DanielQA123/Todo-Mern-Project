@@ -4,8 +4,18 @@ const cors = require('cors');
 
 //instantiate my app
 const app = express();
+
+//Middleware
 app.use(cors());
 app.use(bodyParser.json());
+
+//Custom Middleware:
+const logger = (req,res,next) => {
+    console.log(new Date());
+    next();
+}
+
+app.use(logger);
 
 //Importing all of the routes into server.js file 
 const productRoute = require('./routes/products');
