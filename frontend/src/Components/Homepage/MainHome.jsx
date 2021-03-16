@@ -1,16 +1,26 @@
-import {Jumbotron,Button} from 'react-bootstrap';
+import { Jumbotron, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MainHome = () => {
-    <Jumbotron>
-  <h1>Hello, world!</h1>
-  <p>
-    This is a simple hero unit, a simple jumbotron-style component for calling
-    extra attention to featured content or information.
-  </p>
-  <p>
-    <Button variant="primary">Learn more</Button>
-  </p>
-</Jumbotron>
+    return (
+        <>
+        <section>
+        <Jumbotron>
+                <h1>Hello, welcome to our website!</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Corporis laborum, dignissimos suscipit, 
+                    voluptatem ducimus tempora ipsum vel nemo rem perferendis quas et illum commodi doloribus perspiciatis veniam adipisci, 
+                    nobis temporibus?
+                </p>
+                <p>
+                    <Button variant="info">Learn more</Button>
+                </p>
+            </Jumbotron>
+
+        </section>
+        </>
+    )
 
 }
 
