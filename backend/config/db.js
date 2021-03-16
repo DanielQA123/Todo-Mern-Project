@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const {Schema, model} = mongoose;
 const {DB_URL, DB_NAME } = require('../config/CONSTS.json');
 
-const taskSchema = new Schema({
+const TaskSchema = new Schema({
     title:String,
     startDate: Date,
     notes: String,
@@ -14,7 +14,7 @@ const taskSchema = new Schema({
     completed: Boolean
 });
 
-const Task = model('Task', taskSchema);
+const task = model('task', TaskSchema);
 
 mongoose.connect(`mongodb://${DB_URL}/${DB_NAME}`,{ useNewUrlParser: true, useUnifiedTopology: true }, (err) =>{
     if (err){
@@ -24,4 +24,4 @@ mongoose.connect(`mongodb://${DB_URL}/${DB_NAME}`,{ useNewUrlParser: true, useUn
     }
 });
 
-module.exports = {"Task":Task};
+module.exports = {"task":task};
