@@ -10,6 +10,7 @@ const NavbarPage = () => {
                     <Nav.Link href="#features">Todo's</Nav.Link>
                     <Nav.Link href="#pricing">Scheduled</Nav.Link>
                     <Nav.Link href="#pricing">Accomplishments</Nav.Link>
+                    <Nav.Link href="#pricing">Review</Nav.Link>
                 </Nav>
             </Navbar>
         </>
