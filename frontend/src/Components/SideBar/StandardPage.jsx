@@ -21,7 +21,7 @@ const Standard = () => {
             <div className="container">
                 <div className="col-md-10">
                     <div className="alert alert-success">{view}</div>
-                    <ReadTask view={view} />
+                    <ReadTask view={view} trigger={trigger} />
                 </div>
             </div>
         </div>

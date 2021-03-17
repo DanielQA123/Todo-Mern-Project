@@ -4,7 +4,7 @@ import {Spinner} from 'reactstrap';
 import {TASK_URL} from '../CONST.json';
 import PrimaryTask from './PrimaryTask';
 
-const ReadTask = ({view}) => {
+const ReadTask = ({view, trigger}) => {
    
    //States To view Reminders: 
    const [taskList, setTaskList] = useState([]);
@@ -36,7 +36,7 @@ const ReadTask = ({view}) => {
            <div className="row">
                {taskList.map((item) =>(
                    <div className="col-md-12">
-                   <PrimaryTask key={item._id} item={item}/> 
+                   <PrimaryTask key={item._id} item={item} trigger={trigger}/> 
                    </div>
                ))}
 
