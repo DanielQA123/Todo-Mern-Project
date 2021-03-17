@@ -1,9 +1,10 @@
 import CreateTask from "./CreateTask"
-import {useState} from 'react';
+import { useState } from 'react';
+import ReadTask from "../Pages/ReadTask";
 
-const Standard = () =>{
+const Standard = () => {
 
-    const[view,setView] = useState('');
+    const [view, setView] = useState('');
 
     const trigger = (data) => {
         setView(data);
@@ -11,15 +12,20 @@ const Standard = () =>{
 
 
 
-    return(
+    return (
+
         <div className="row">
             <div className="col-md-2">
-                <CreateTask trigger={trigger}/>
+                <CreateTask trigger={trigger} />
             </div>
-            <div className="col-md-10">
-                <div className="alert alert-success">{view}</div>
+            <div className="container">
+                <div className="col-md-10">
+                    <div className="alert alert-success">{view}</div>
+                    <ReadTask view={view} />
+                </div>
             </div>
         </div>
+
     )
 
 }
