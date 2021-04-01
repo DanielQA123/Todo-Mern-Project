@@ -1,4 +1,5 @@
 import {Navbar, Nav} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const NavbarPage = () => {
     return (
@@ -6,7 +7,7 @@ const NavbarPage = () => {
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="#home">Dan's Reminders</Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link to="/">Home<span class="sr-only">(current)</span></Nav.Link>
                     <Nav.Link href="#features">Todo's</Nav.Link>
                     <Nav.Link href="#pricing">Scheduled</Nav.Link>
                     <Nav.Link href="#pricing">Accomplishments</Nav.Link>
