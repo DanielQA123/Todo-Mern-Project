@@ -16,6 +16,17 @@ const TaskSchema = new Schema({
 
 const task = model('task', TaskSchema);
 
+const ForumSchema = new Schema({
+    
+    username:String,
+    TodoReviewTitle:String,
+    comment:String,
+    postDate: Date
+});
+
+const forum = model('forum', ForumSchema);
+
+
 mongoose.connect(`mongodb://${DB_URL}/${DB_NAME}`,{ useNewUrlParser: true, useUnifiedTopology: true }, (err) =>{
     if (err){
         console.error(err);
@@ -24,4 +35,4 @@ mongoose.connect(`mongodb://${DB_URL}/${DB_NAME}`,{ useNewUrlParser: true, useUn
     }
 });
 
-module.exports = {"task":task};
+module.exports = {"task":task, "forum":forum};

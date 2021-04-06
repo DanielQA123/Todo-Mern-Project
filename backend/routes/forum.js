@@ -41,10 +41,44 @@ router.post("/create", profanity.init, (req, res, next) =>{
 
 //?DELETE REQUEST:
 router.delete("/delete/:id", (req, res, next) =>{
-    
-})
+    forum.findByIdAndDelete(req.params.id, (err) =>{
+        if(err){
+            next(err);
+        }res.status(204).send('Your request has been successfully deleted');
+    })
+});
 
 
-//?PATCH REQUEST:
-//?PUT REQUEST:
+//?PATCH REQUEST (PARTIAL UPDATE):
+router.patch("/update/:id", (req, res, next) =>{
+    forum.findByIdAndUpdate(req.params.id, req.body,
+        {new: true},
+        (err, result) =>{
+            if(err){ next(err); }
+            res.status(202).send('Successfully Updated')
+        })
+});
 
+
+//?PUT REQUEST (FULLY UPDATING = REPLACING):
+router.put("/replace/:id", (req, res, next) =>{
+    const {
+        username,
+        TodoReviewTitle,
+        comment,
+        postDate
+    } = req.body;
+    forum.findByIdAndUpdate(req.params.id, {
+        username,
+        TodoReviewTitle,
+        comment,
+        postDate
+    }, {new:true}, (err, result) =>{
+        if(err){
+            next(err);
+        }
+        res.status(202).send('Sucessfully replaced and updated');
+    });
+});
+
+module.exports = router;
