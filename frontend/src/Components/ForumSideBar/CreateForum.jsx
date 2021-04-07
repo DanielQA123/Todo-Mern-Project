@@ -20,7 +20,7 @@ const CreateForum = ({ trigger }) => {
                 clearValues();
                 trigger(res.data);
             }).catch((err) => {
-                trigger.error(err);
+                trigger(err);
             })
     }
 
