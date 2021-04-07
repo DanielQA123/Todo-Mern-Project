@@ -1,3 +1,4 @@
+import NavbarPage from "../NavBar/Navbar";
 import MainHome from "./MainHome"
 
 const Home = () => {
@@ -5,9 +6,10 @@ const Home = () => {
     return (
         <>
             <div>
-                <h2> Reminders </h2>
-            </div>
+   
             <MainHome/>
+                
+            </div>
         </>
     )
 

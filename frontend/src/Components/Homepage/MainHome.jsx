@@ -17,8 +17,9 @@ const MainHome = () => {
                     <Button variant="info">Get Started</Button>
                 </p>
             </Jumbotron>
-
         </section>
+
+    
         </>
     )
 
