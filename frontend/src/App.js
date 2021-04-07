@@ -1,4 +1,5 @@
 import '../src/CSS/App.css';
+import Forum from './Components/ForumPage/Forum';
 import Home from './Components/Homepage/Home';
 import Page from './Components/SideBar/StandardPage';
 
@@ -10,7 +11,8 @@ const App = () =>  {
     
     <div className="App">
       {/* <Home/> */}
-      <Page/>
+      {/* <Page/> */}
+      <Forum/>
     
     </div>
   );
