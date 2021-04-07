@@ -78,7 +78,6 @@ const CreateForum = ({ trigger }) => {
         </>
     )
 
-
 }
 
 export default CreateForum;
